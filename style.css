@@ -1,0 +1,398 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html{
+    font-size:16px;
+    font-family: 'roboto', sans-serif;
+    line-height:1.5;
+    word-wrap:break-word;
+}
+
+h1,h2,h3,h4,h5{
+    display:block; 
+    margin-bottom:15px; 
+    font-family: BebasNeueBold,Helvetica,sans-serif;
+}
+
+h1{
+ font-size:4rem;
+}
+h2{
+ font-size: 1.75rem;
+}
+h3{
+ font-size: 2rem;
+}
+h4{
+ font-size: 1.75rem;
+}
+
+a{
+    text-decoration:none;
+}
+
+.btn{
+    background:#2d2d2d; 
+    color:#fff; 
+    padding: 7.5px 15px; 
+    border-radius: 7.5px; 
+}
+
+.btn:hover{
+    background:#000; 
+    color:#fff;
+    cursor:pointer;
+}
+
+.btn-secondary{
+    background: #2d2d2d;
+    color:#fff;
+}
+
+/** 
+   Grid **/
+
+section{
+    padding:30px 15px;
+    text-align:center;
+}
+
+section h2{
+    float:left; 
+    margin-left:16px;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+}
+
+.row{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    clear:both;
+}
+
+.content{
+    align-items: center;
+    justify-content: center;
+
+}
+
+  
+
+/** 
+   Header / Nav **/
+
+.site-header {
+    background:#c70101;
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:80px;
+    padding: 15px 30px;
+    border-bottom: 5px solid #fff;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    z-index:99;
+}
+
+.site-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+
+.site-header nav ul{
+    list-style-type: none;
+    float:right;
+}
+.site-header nav ul li{
+    display:inline; 
+    margin:0px 7.5px; 
+}
+.site-header nav a{
+    position:relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    text-transform: uppercase;
+}
+
+.site-header nav a:hover{
+    color:#fff;
+}
+
+.site-header nav a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 25px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+  
+.site-header nav a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/** Hero **/
+
+#hero{
+    display:flex;
+    background:linear-gradient(0deg, rgba(53, 50, 52, 0.6), rgba(37, 36, 37, 0.6)), url(assets/stadium-banner.webp);
+    background-size:cover;
+    align-items: center;
+    justify-content: center;
+    height:75vh;
+    margin-top:80px;
+    text-align:center;
+    color:#fff;
+}
+
+#hero p{
+    font-size: 1.5rem;
+}
+
+/** Card System **/
+
+.card{
+    background:#fff;
+    height:460px;
+    max-width:25%;
+    text-align:left;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border: 1px solid #f2f2f2;
+    border-radius: 7.5px;
+}
+
+.card:hover{
+    box-shadow: 0 14px 28px rgb(0 0 0 / 10%), 0 10px 10px rgb(0 0 0 / 10%);
+}
+
+.card .container{
+    padding:15px;
+}
+
+.card .btn{
+    position: relative;
+    top: 20px;
+}
+
+
+/** Latest News **/
+#latest-news{
+    background:#f8f8f8;
+}
+
+.half-content{
+    background: #fff;
+    height: 100%;
+    width: 50%;
+    padding:15px;
+}
+
+.half-content hr{
+    border:1px solid #c70101;
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.half-content h4{
+    line-height:1.25;
+}
+
+#latest-news .card{
+    max-width:48%;
+    height:400px;
+}
+
+.left-card{
+    background-image: url('assets/man-utd-away-kit.webp');
+    background-size: cover;
+
+}
+
+.right-card{
+    background-image: url('assets/united-in-australia.webp');
+    background-size: cover;
+
+}
+
+/** Fixtures **/
+
+#transfers .card{
+    width:23%;
+    height:400px;
+}
+
+#transfers .card .half-content{
+    position:relative;
+    top:40%;
+    background:none;
+    width:100%;
+    color:#fff;
+}
+
+
+#transfers .card .half-content .btn-secondary{
+    background:none;
+    border: 2px solid #fff;
+}
+
+#transfers .card .half-content .btn-secondary:hover{
+    background:#fff;
+    border: 2px solid #fff;
+    color:#000;
+}
+
+
+#trans-1{
+    background: linear-gradient(0deg, rgba(53, 50, 52, 1), rgba(37, 36, 37, 0.2)), url('assets/eriksen-card.jpeg');
+    background-size:cover;
+    background-position: 25%;
+}
+
+#trans-2{
+    background: linear-gradient(0deg, rgba(53, 50, 52, 1), rgba(37, 36, 37, 0.2)), url('assets/martinez-card.webp');
+    background-size:cover;
+    background-position: 80%;
+}
+
+#trans-3{
+    background: linear-gradient(0deg, rgba(53, 50, 52, 1), rgba(37, 36, 37, 0.2)), url('assets/malacia-card.jpeg');
+    background-size:cover;
+    background-position: 80%;
+}
+
+#trans-4{
+    background: linear-gradient(0deg, rgba(53, 50, 52, 1), rgba(37, 36, 37, 0.2)), url('assets/ronaldo-card.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+
+/** 
+   Footer **/
+
+footer{
+    height: 296px;
+    background:#2a2a2a;
+    color:#fff;
+    padding: 60px 30px;
+}
+
+footer h4{
+    color:#c70101;
+    
+}
+
+footer a{
+    color:#fff;
+}
+
+
+footer .column{
+    max-width:25%;
+}
+
+footer .column ul{
+    list-style-type: none;
+}
+
+#author-reference{
+    width:100%;
+    background:#c70101;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+
+/** iPad Devices **/
+@media only screen and (max-width: 768px) {
+    html{
+        font-size:12px;
+    }
+    .container{
+        width: 100%;
+    }
+    .card{
+        max-width:43%;
+        margin:15px 0px;
+    }
+
+    #latest-news .card {
+        max-width: 48%;
+        min-height: 530px;
+    }
+
+    .half-content {
+        position:relative;
+        top:65%;
+        height: 36%;
+        width: 100%;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    #transfers .card{
+        width:50%;
+    }
+
+    #transfers .card .half-content{
+      top: 60%;
+    }
+}
+
+/** Mobile Devices **/
+@media only screen and (max-width: 480px) {
+
+    section h2{margin-left:0px;}
+
+    .card{
+        max-width:100%;
+    }
+
+    #latest-news .card {
+        max-width: 100%;
+        min-height: 480px;
+        margin-bottom:30px;
+    }
+
+    .half-content {
+        height: 40%;
+    }
+
+    .left-card .half-content {
+        float: none;
+    }
+
+    #transfers .card{
+        width:100%;
+    }
+
+    footer{
+        height:100%;
+    }
+
+    footer .column{
+        height:100%;
+        min-width:100%;
+        margin: 15px 0px;
+    }
+
+}
